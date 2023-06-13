@@ -14,24 +14,6 @@ use `$ sudo npm install` if you're on a mac.
 ## Run Application in Local Env ( if local DB setup)
 
 ```
-$ npm run start:local
+$ npm run start
+$ npm start
 ```
-
-## Run Application in Development Env
-
-```
-$ npm run start:dev
-```
-OR
-```
-$ node server.js --development
-```
-
-## Run Application in Production Env
-
-```
-$ npm run start:prod
-```
-OR
-```
-$ node server.js --prod
