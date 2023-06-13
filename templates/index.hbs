@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="/public/style.css" rel="stylesheet"> -->
+    <!-- <link href="./style.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <link href="https://allfont.net/allfont.css?fonts=courier-new" rel="stylesheet" type="text/css" /> -->
+    <style>
+        @font-face {
+            font-family: "Tahoma";
+            src: url("https://tpp-api.e-tablab.com/public/Tahoma.eot");
+            src: url("https://tpp-api.e-tablab.com/public/Tahoma.eot?#iefix") format("embedded-opentype"),
+                url("https://tpp-api.e-tablab.com/public/Tahoma.woff") format("woff"),
+                url("https://tpp-api.e-tablab.com/public/Tahoma.woff2") format("woff2"),
+                url("https://tpp-api.e-tablab.com/public/Tahoma.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        ;
+
+        @font-face {
+            font-family: "Book-Antiqua";
+            src: url("https://tpp-api.e-tablab.com/public/Book-Antiqua.eot");
+            src: url("https://tpp-api.e-tablab.com/public/Book-Antiqua.eot?#iefix") format("embedded-opentype"),
+                url("https://tpp-api.e-tablab.com/public/Book-Antiqua.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        ;
+
+        @font-face {
+            font-family: "Courier-New";
+            src: url("https://tpp-api.e-tablab.com/public/Courier-New.eot");
+            src: url("https://tpp-api.e-tablab.com/public/Courier-New.eot?#iefix") format("embedded-opentype"),
+                url("https://tpp-api.e-tablab.com/public/CourierNewPSMT.woff") format("woff"),
+                url("https://tpp-api.e-tablab.com/public/CourierNewPSMT.woff2") format("woff2"),
+                url("https://tpp-api.e-tablab.com/public/CourierNewPSMT.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        ;
+
+        @font-face {
+            font-family: "Times-New-Roman";
+            src: url("https://tpp-api.e-tablab.com/public/Times-New-Roman.eot");
+            src: url("https://tpp-api.e-tablab.com/public/Times-New-Roman.eot?#iefix") format("embedded-opentype"),
+                url("https://tpp-api.e-tablab.com/public/Times-New-Roman.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        ;
+
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 0px;
+        }
+
+        svg path {
+            fill: #000000;
+        }
+
+        p {
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <table style="padding: 30px 20px 10px 20px" cellpadding="0" cellspacing="0">
+        <tbody>
+            <tr>
+                <td style="padding-bottom: 16px;">
+                    <table style="table-layout: fixed;" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td style=" padding-left: 5px">
+                                    <p style="font-size: 11px; font-family: 'Tahoma'; margin: 0px; font-weight: bold">
+                                        PayRight Health Solutions, LLC</p>
+                                    <p style="font-size: 11px; font-family: 'Tahoma'; margin: 0px; font-weight: bold">
+                                        c/o Priority Payment Systems, LLC
+                                    </p>
+                                    <p style="font-size: 11px; font-family: 'Tahoma'; margin: 0px; font-weight: bold">
+                                        PO Box 117340</p>
+                                    <p style="font-size: 11px; font-family: 'Tahoma'; margin: 0px; font-weight: bold">
+                                        Atlanta, GA 30368-7340</p>
+                                    <p style="font-size: 11px; font-family: 'Tahoma'; margin: 0px; font-weight: bold">
+                                        (252) 386-9518</p>
+                                </td>
+                                <td>
+                                    <div style="width: 220px; margin: 0 auto; margin-top: 25px; margin-right: 100px;">
+                                        <img src="data:image/jpeg;base64, {{logo}}" alt="Logo"
+                                            style="max-width: 100%;" />
+                                    </div>
+                                </td>
+                                <td style="text-align: right; vertical-align: top; margin-top: 30px;">
+                                    <div style="margin-top: 30px; margin-right: 30px;">
+                                        <p style="font-size: 16px; font-family: 'Book-Antiqua';">{{invoiceNumber}}
+                                        </p>
+                                        <p style="font-size: 12px; font-family: 'Courier New', arial;">{{currentDate}}
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-bottom: 5px;">
+                    <p style="font-size: 11px; font-weight: bold; font-family: 'Courier New', arial;">ATTENTION:</p>
+                    <p style="font-size: 12px; font-family: 'Courier New', arial;">{{payer.companyName}}</p>
+                    <p style="font-size: 12px; font-family: 'Courier New', arial;">{{payer.street}}</p>
+                    <p style="font-size: 12px; font-family: 'Courier New', arial;">{{payer.city}}, {{payer.state}}
+                        {{payer.zip}}</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table cellpadding="0" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th
+                                    style="text-align: left; font-family: 'Courier New', arial; font-size: 12px; font-weight: 2000; padding-bottom: 4px; width: 30%;">
+                                    CLIENT</th>
+                                <th
+                                    style="font-family: 'Courier New', arial; font-size: 12px; font-weight: 2000; padding: 0px 5px 3px; text-align: center; width: 30%;">
+                                    DATE</th>
+                                <th
+                                    style="font-family: 'Courier New', arial; font-size: 12px; font-weight: 2000; padding: 0px 5px 3px; text-align: left; width: 30%;">
+                                    CAREGIVER</th>
+                                <th
+                                    style="font-family: 'Courier New', arial; font-size: 12px; font-weight: 2000; padding: 0px 5px 3px; text-align: center;">
+                                    UNITS</th>
+                                <th
+                                    style="font-family: 'Courier New', arial; font-size: 12px; font-weight: 2000; padding: 0px 5px 3px; text-align: center;">
+                                    RATE</th>
+                                <th
+                                    style="font-family: 'Courier New', arial; font-size: 12px; font-weight: 2000; padding: 0px 5px 3px; text-align: left;">
+                                    SERVICE</th>
+                                <th
+                                    style="font-family: 'Courier New', arial; font-size: 12px; font-weight: 2000; padding-bottom: 3px; text-align: right; width: 10%;">
+                                    TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="7"
+                                    style="font-family: 'Courier New', arial; font-size: 12px; padding: 1px 0px;">
+                                    DOB: {{clientInfo.dateOfBirth}}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="7"
+                                    style="font-family: 'Courier New', arial; font-size: 12px; padding: 1px 0px 2px;">
+                                    POL#: {{clientInfo.policyNumber}}</td>
+                            </tr>
+                            {{#each transactionDetail}}
+                            <tr>
+                                <td
+                                    style="text-align: left; font-family: 'Times-New-Roman'; font-size: 11px; padding: 5px 0px; width: 30%;">
+                                    {{this.clientName}}</td>
+                                <td
+                                    style="font-family: 'Times-New-Roman'; font-size: 11px; padding: 5px 5px 0px; text-align: center; width: 30%;">
+                                    {{this.dateOfService}}</td>
+                                <td
+                                    style="font-family: 'Times-New-Roman'; font-size: 11px; padding: 5px 5px 0px; text-align: left; width: 30%;">
+                                    {{this.caregiverName}}</td>
+                                <td
+                                    style="font-family: 'Times-New-Roman'; font-size: 11px; padding: 5px 5px 0px; text-align: center;">
+                                    {{this.hours}}</td>
+                                <td
+                                    style="font-family: 'Times-New-Roman'; font-size: 11px; padding: 5px 5px 0px; text-align: center;">
+                                    {{this.serviceCode}}</td>
+                                <td
+                                    style="font-family: 'Times-New-Roman'; font-size: 11px; padding: 5px 5px 0px; text-align: left;">
+                                    CAREGIVER</td>
+                                <td
+                                    style="font-family: 'Times-New-Roman'; font-size: 11px; padding: 5px 0px; text-align: right; width: 10%;">
+                                    ${{this.totalBilling}}</td>
+                            </tr>
+                            {{/each}}
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3" style="padding-top: 5px;"></td>
+                                <td colspan="3" style="padding-left: 32px;">
+                                    <p
+                                        style="font-family: 'Arial'; font-size: 11px; padding-top: 5px; padding: 5px 5px 2px; border-bottom: 1px solid #000000; margin-bottom: 5px; text-align: right;">
+                                        Subtotal this client:</p>
+                                </td>
+                                <td colspan="3">
+                                    <p
+                                        style="font-family: 'Arial'; font-size: 11px; padding-top: 5px; padding-bottom: 2px; border-bottom: 1px solid #000000; margin-bottom: 5px; text-align: right;">
+                                        ${{this.totalAmount}}</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"></td>
+                                <td colspan="3">
+                                    <p
+                                        style="font-family: 'Arial'; font-size: 11px; text-align: right; padding: 0px 5px 0px;">
+                                        TOTAL OF:</p>
+                                </td>
+                                <td colspan="3">
+                                    <p style="font-family: 'Arial'; font-size: 11px; text-align: right;">
+                                        ${{this.totalAmount}}</p>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="font-family: 'Courier New', arial; font-size: 12px; padding: 2px 0px; font-weight: bold;">
+                        Please Pay By:
+                        {{currentDate}}</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="font-family: 'Arial'; font-size: 14px; padding: 0px 0px 12px; font-weight: bold;">This
+                        bill is for services rendered through: <span
+                            style="font-size: 16px;">{{organizationName}}</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; font-family: 'Book-Antiqua'; font-size: 16px; padding: 8px 0px 0px 0px;">
+                    <p>Please mail to above address check for total $</p>
+                    <p>Payable To: "PAYRIGHT HEALTH SOLUTIONS, LLC"</p>
+                    <p>TAX ID# 47-4257046</p>
+                    <p>Terms NET 0</p>
+                    <p>Finance charge of 1.5%/month added if past due</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
