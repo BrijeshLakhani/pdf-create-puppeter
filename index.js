@@ -2,7 +2,6 @@ const puppeteer = require("puppeteer");
 const hbs = require("handlebars");
 const fs = require("fs-extra");
 const path = require("path");
-// const data = require("./data.json");
 const Templates = path.resolve("./assests");
 console.log("Templates: ", Templates);
 
@@ -23,6 +22,7 @@ const genratePdf = async () => {
 
     const page = await browser.newPage();
 
+    // passing data
     const document = {
       currentDate: "06/06/2023",
       invoiceNumber: "LIN-564164",
@@ -99,7 +99,6 @@ const genratePdf = async () => {
       format: "A4",
       printBackground: true,
     });
-
 
     console.log(
       ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> pdf genrate succesfully >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
