@@ -7,11 +7,11 @@ after clone this project to your computer, run following commands to install pro
 ```bash
 $ npm install 
 ```
-Please make sure latest **Node 8+ LTS** and **NPM 5+** are installed.
+Please make sure latest **Node 16+ LTS** and **NPM 9+** are installed.
 
 use `$ sudo npm install` if you're on a mac.
 
-## Run Application in Local Env ( if local DB setup)
+## Run Application in Local
 
 ```
 $ npm run start
